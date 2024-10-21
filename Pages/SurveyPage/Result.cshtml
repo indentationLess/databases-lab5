@@ -1,0 +1,15 @@
+@page
+@model lab5.Pages.SurveyPage.ResultModel
+@{
+	ViewData["Title"] = "Survey Results";
+}
+<h1 class="mb-4">@ViewData["Title"]</h1>
+<div class="card">
+	<div class="card-body">
+		<h5 class="card-title">Survey Response</h5>
+		<p class="card-text" ><strong>Name:</strong> @Model.Name</p>
+		<p class="card-text"><strong>Rating:</strong> @Model.Stars star(s)</p>
+		<p class="card-text"><strong>Review:</strong> @Model.Review</p>
+	</div>
+</div>
+<a asp-page="./Survey" class="btn btn-primary mt-3 d-inline-block">Submit another survey</a>
